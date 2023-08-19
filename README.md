@@ -36,6 +36,9 @@ assertThat(constantString1).isSameAs(constantString2);
 
 Dette designvalg har både fordele og ulemper. Det letter skrivningen af flertrådet kode og giver mulighed for nogle optimeringer. Dog kan det blive dyrt at ændre værdien af en streng. Hvis der er behov for mange ændringer, bør man overveje at bruge `StringBuilder` eller `StringBuffer`. Disse klasser tillader mere effektive ændringer i strengen.
 
+**@Anders Jeg har lidt svært ved at se, hvorfor dette design valg er blevet taget. Personligt ville jeg tænke at de fleste der ikke har læst op på det, og derfor ville de  ikke bruge en `StringBuilder`, og stadig ændre på strengen, hvilket hvis jeg har forstået det rigtigt ville gøre programmet signifikant langsommere. 
+Hvis man ville have at strengen var immutable, så kunne man jo bare ændre den til en konstant. Er der noget jeg overser?**
+
 https://www.baeldung.com/java-string-pool
 
 # Modulus
