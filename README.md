@@ -39,6 +39,8 @@ Dette designvalg har både fordele og ulemper. Det letter skrivningen af flertr�
 **@Anders Jeg har lidt svært ved at se, hvorfor dette design valg er blevet taget. Personligt ville jeg tænke at de fleste der ikke har læst op på det, og derfor ville de  ikke bruge en `StringBuilder`, og stadig ændre på strengen, hvilket hvis jeg har forstået det rigtigt ville gøre programmet signifikant langsommere. 
 Hvis man ville have at strengen var immutable, så kunne man jo bare ændre den til en konstant. Er der noget jeg overser?**
 
+(Du mere end velkommen til at lave en pull request og erstatte denne parantese med svaret, det kunne være lidt sejt, ellers kan vi også bare tage den mundligt næste gang. Tak på forhånd)
+
 https://www.baeldung.com/java-string-pool
 
 # Modulus
