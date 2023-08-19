@@ -46,10 +46,7 @@ Modulus operationen, ofte kaldet "modulo", handler om at finde resten, når et t
 void setup(){
   clear();
   size(500,500);
-
 }
-
-  
 
 void draw(){
   noStroke();
