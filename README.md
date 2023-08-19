@@ -65,5 +65,4 @@ void draw(){
 }
 ```
 ### Resultat
-
-![[Pasted image 20230819130047.png]]
+![](Pasted%20image%2020230819130047.png)
