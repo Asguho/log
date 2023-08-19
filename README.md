@@ -21,17 +21,49 @@ https://sentry.io/answers/java-pass-by-reference-or-value/
 
 # String object in Java
 
-Når det kommer til streng (string) objekter i Java, så er de **immutable**, hvilket betyder, at de ikke kan ændres efter oprettelsen. Når du foretager ændringer på en streng (som f.eks. at tilføje, fjerne eller ændre tegn), oprettes faktisk en helt ny streng. Den oprindelige streng forbliver uændret i hukommelsen. Dette designvalg har flere fordele, herunder trådsikkerhed, ydeevne og forudsigelig opførsel.
+Når vi taler om streng objekter i Java, er de **immutable**. Dette betyder, at de ikke kan ændres efter at være blevet oprettet. Når du foretager ændringer på en streng, såsom at tilføje, fjerne eller ændre tegn, oprettes der faktisk en helt ny streng. Den oprindelige streng forbliver uændret i hukommelsen. Dette designvalg har flere fordele, da Java nu kan pege på den samme sted i streng i memory for alle ens strenge. Når en ny streng oprettes, søger Java Virtual Machine (JVM) i det område, den har allokeret til Java String Pool, og hvis den finder strengen der, returnerer den blot hukommelsesreferencen.
 
-For eksempel:
+Her er et eksempel:
 
 ```java
-String original = "Hello";
-String modified = original.concat(" World"); // Dette opretter en ny streng
-System.out.println(original); // Output: "Hello"
-System.out.println(modified); // Output: "Hello World"`
+String constantString1 = "Hello world";
+String constantString2 = "Hello world";
+assertThat(constantString1).isSameAs(constantString2);
 ```
 
-Denne "immutable" natur af strengobjekter betyder, at hvis du arbejder med strenge og ønsker at foretage gentagne ændringer, bør du overveje brugen af `StringBuilder` eller `StringBuffer`, da disse klasser tillader mere effektive ændringer af tekstindhold.
+
+*I det tidligere eksempel opretter vi to strenge og tester, om de har en reference til det samme sted i memory*
+
+Dette designvalg har både fordele og ulemper. Det letter skrivningen af flertrådet kode og giver mulighed for nogle optimeringer. Dog kan det blive dyrt at ændre værdien af en streng. Hvis der er behov for mange ændringer, bør man overveje at bruge `StringBuilder` eller `StringBuffer`. Disse klasser tillader mere effektive ændringer i strengen.
 
 https://www.baeldung.com/java-string-pool
+
+# Modulus
+Modulus operationen, ofte kaldet "modulo", handler om at finde resten, når et tal deles med et andet tal. Det bruges ofte med symbolet "%". For eksempel er 10 % 3 lig med 1, fordi når 10 deles med 3, er resten 1.
+## Eksempel
+### Kode
+```java
+void setup(){
+  clear();
+  size(500,500);
+
+}
+
+  
+
+void draw(){
+  noStroke();
+  fill(0,3);
+  rect(0,0,500,500);
+  fill(255);
+  rect(frameCount % width,(height/6)*1, 2,2);
+  rect(frameCount % width,(frameCount % (width/10)) + (height/6)*2, 2,2);
+  rect(frameCount % width,(frameCount/50 % 2)*30 + (height/6)*3, 2,2);
+  rect(frameCount % width,(height/6)*4, 2,frameCount % (height/10));
+  fill(frameCount/2 % 255, 100, 0);
+  rect(frameCount % width,(height/6)*5, 2,2);
+}
+```
+### Resultat
+
+![[Pasted image 20230819130047.png]]
