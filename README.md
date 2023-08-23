@@ -111,4 +111,4 @@ void printInMiddel(String s) {
 }
 ```
 ### Resultat
-![[Pasted image 20230823124320.png]]
+![](Pasted%20image%2020230823124320.png)
