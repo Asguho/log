@@ -105,7 +105,6 @@ void draw() {
 void printInMiddle(String s) {
     textSize(128);
     fill(0);
-    // text(s,width / 2-textWidth(s)/2,height / 2+(textAscent()+textDescent())/2);
     textAlign(CENTER, CENTER);
     text(s, width / 2, height / 2);  
 }
