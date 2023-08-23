@@ -83,7 +83,7 @@ void setup() {
 void draw() {
     background(255);
     /*
-     I calculate the angle of the vector that point form the middel to the mouse position, we get the angel in radians, so we divide by PI and plus by 1 and multiply by 2 to get a value between -2 and 2. We then round the value to the nearest integer, and pass it as the switch argument.
+     I calculate the angle of the vector from the middel to the mouse position. We get the angel in radians, so we divide by PI and plus by 1 and multiply by 2 to get a value between -2 and 2. We then round the value to the nearest integer, and pass it as the switch argument.
      */
     switch(round((new PVector(mouseX - width / 2, mouseY - height / 2).heading() / PI) * 2)) {
         case -2 :
