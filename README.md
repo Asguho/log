@@ -68,3 +68,47 @@ void draw(){
 ```
 ### Resultat
 ![](Pasted%20image%2020230819130047.png)
+# kompas
+### If statement
+En if-erklæring er en betinget udførelsesstruktur i programmering, der bruges til at vælge mellem to forskellige handlinger baseret på en betingelse. Hvis betingelsen er sand, udføres koden inde i if-blokken.
+
+### Switch case
+Switch-case er en anden type betinget udførelsesstruktur, der bruges i programmering. Det bruges til at vælge en handling blandt flere muligheder baseret på værdien af en variabel eller en udtryk.
+### kode
+```java
+void setup() {
+    fullScreen();
+}
+
+void draw() {
+    background(255);
+    /*
+     I calculate the angle of the vector that point form the middel to the mouse position, we get the angel in radians, so we divide by PI and plus by 1 and multiply by 2 to get a value between -2 and 2. We then round the value to the nearest integer, and pass it as the switch argument.
+     */
+    switch(round((new PVector(mouseX - width / 2, mouseY - height / 2).heading() / PI) * 2)) {
+        case -2 :
+        case 2 :
+            printInMiddel("W");
+        break;  
+        case 1 :
+            printInMiddel("S");
+        break;
+        case 0 :
+            printInMiddel("E");
+        break;
+        case -1 :
+            printInMiddel("N");
+        break;
+    }
+}
+  
+void printInMiddel(String s) {
+    textSize(128);
+    fill(0);
+    // text(s,width / 2-textWidth(s)/2,height / 2+(textAscent()+textDescent())/2);
+    textAlign(CENTER, CENTER);
+    text(s, width / 2, height / 2);  
+}
+```
+### Resultat
+![[Pasted image 20230823124320.png]]
