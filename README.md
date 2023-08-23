@@ -85,28 +85,28 @@ void draw() {
     /*
      I calculate the angle of the vector from the middel to the mouse position. We get the angel in radians, so we divide by PI and plus by 1 and multiply by 2 to get a value between -2 and 2. We then round the value to the nearest integer, and pass it as the switch argument.
      */
-    switch(round((new PVector(mouseX - width / 2, mouseY - height / 2).heading() / PI) * 2)) {
+   switch(round((new PVector(mouseX - width / 2, mouseY - height / 2).heading() / PI) * 2)) {
         case -2 :
         case 2 :
-            printInMiddle("W");
+            printInCenter('W');
         break;  
         case 1 :
-            printInMiddle("S");
+            printInCenter('S');
         break;
         case 0 :
-            printInMiddle("E");
+            printInCenter('E');
         break;
         case -1 :
-            printInMiddle("N");
+            printInCenter('N');
         break;
     }
 }
   
-void printInMiddle(String s) {
+void printInCenter(char s) {
     textSize(128);
     fill(0);
     textAlign(CENTER, CENTER);
-    text(s, width / 2, height / 2);  
+    text(s, width / 2, height / 2);
 }
 ```
 ### Resultat
