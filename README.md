@@ -88,21 +88,21 @@ void draw() {
     switch(round((new PVector(mouseX - width / 2, mouseY - height / 2).heading() / PI) * 2)) {
         case -2 :
         case 2 :
-            printInMiddel("W");
+            printInMiddle("W");
         break;  
         case 1 :
-            printInMiddel("S");
+            printInMiddle("S");
         break;
         case 0 :
-            printInMiddel("E");
+            printInMiddle("E");
         break;
         case -1 :
-            printInMiddel("N");
+            printInMiddle("N");
         break;
     }
 }
   
-void printInMiddel(String s) {
+void printInMiddle(String s) {
     textSize(128);
     fill(0);
     // text(s,width / 2-textWidth(s)/2,height / 2+(textAscent()+textDescent())/2);
