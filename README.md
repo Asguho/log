@@ -261,3 +261,20 @@ void ekstraOpgave(){
 ```
 ### Resultat
 ![](Pasted%20image%2020230905220949.png)
+# Nested for-loops
+## Tegn cirkler
+### Kode
+```java
+void setup(){
+    size(500, 500);
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            circle(width/10*i+20, height/10*j+20, width/20);
+        }
+    }
+}
+```
+### Resultat
+![](Pasted%20image%2020230906112025.png)
+
+## Skakbræt ekstra svær
