@@ -379,3 +379,97 @@ void setup() {
     }
 }
 ```
+
+# Flerdimensionelle arrays
+
+```java
+void setup(){
+    // Opret en 3x3 matrix og find værdien i midten (anden række, anden kolonne).
+    {
+        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+        println(matrix[1][1]);
+    }
+    // Opret en 2D matrix med 3 rækker og 4 kolonner, fyld den med tilfældige tal og beregn summen af hver række. Udskriv resultaterne.
+    {
+        int[][] matrix = new int[3][4];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = (int) random(10);
+            }
+        }
+
+        for (int i = 0; i < matrix.length; i++) {
+            int sum = 0;    
+            for (int j = 0; j < matrix[i].length; j++) {
+                sum += matrix[i][j];
+            }
+            println(sum);
+        }
+    }
+    // Opret en 2D matrix, og transponer den, dvs. skift rækker og kolonner. Udskriv både den oprindelige og transponerede matrix
+
+    {
+        int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
+
+        int[][] transposedMatrix = new int[matrix.length][matrix[0].length];
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length ; j++) {
+                transposedMatrix[j][i] = matrix[i][j];
+            }
+        }
+
+        for (int i = 0; i < matrix.length; i++) {
+            println(matrix[i]);
+        }
+        println();
+        for (int i = 0; i < transposedMatrix.length; i++) {
+            println(transposedMatrix[i]);
+        }
+    }
+    // Opret to 2D matricer og find en metode der kan sammenligne om de har ens indhold
+    {
+        int[][] matrix1 = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9}};
+
+        boolean equal = true;
+
+        if (matrix1.length == matrix2.length) {
+            for (int i = 0; i < matrix1.length; i++) {
+                if (matrix1[i].length == matrix2[i].length) {
+                    for (int j = 0; j < matrix1[i].length; j++) {
+                        if (matrix1[i][j] != matrix2[i][j]) {
+                            equal = false;
+                        }
+                    }
+                } else {
+                    equal = false;
+                }
+            }
+        } else {
+            equal = false;
+        }
+
+        println(equal);
+    }
+    // Skriv program der kan multiplicere to matricer
+    {
+        int[][] matrix1 = {{1,2,3},{4,5,6},{7,8,9}};
+        int[][] matrix2 = {{1,2,3},{4,5,6},{7,8,9}};
+
+        int[][] result = new int[matrix1.length][matrix2[0].length];
+
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix2[0].length; j++) {
+                for (int k = 0; k < matrix1[0].length; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+
+        for (int i = 0; i < result.length; i++) {
+            println(result[i]);
+        }
+    }
+}
+```
