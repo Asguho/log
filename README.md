@@ -505,19 +505,33 @@ void setup() {
 ```
 # Opgaver i funktioner
 **Hvad bruges krølle-parenteser til i en funktion (og hvad bruges krølle-parenteser til generelt…)**
+
 Til at definerer scope
+
 **Hvad anvendes almindelige parenteser til i en funktion**
-Til at definere parametre man kan sende med til funktionen og fungere, som variabler man kan bruge i funktionen
+
+Til at definere parametre
+
 **Hvad betyder “returtype” og hvor skrives den i en funktion**
+
 Returtypen er den type værdi funktionen returnere, og den skrives før funktionsnavnet
+
 **Hvad er forskellen på argumenter og parametre**
+
 parametre er dem man definerer i funktions-deklarationen og argumenter er det man sender til funktionen, når man kalder den
+
 **Hvornår er det smart at bruge funktioner**
+
 Når man skal bruge samme kode flere gange
+
 **Hvad betyder “return” og hvordan anvendes det**
+
 At funktionen returnere en værdi, og det anvendes til at returnere en værdi
+
 **Hvad betyder “void” og hvordan anvendes det**
+
 At funktionen ikke returnere en værdi, og det anvendes til at definere at funktionen ikke returnere en værdi
+
 **Lav en funktion med navnet “udskriv10”, der kan udskrive 10-tabellen.**
 ```java
 void udskriv10(){
@@ -553,7 +567,9 @@ int mult(int tal1, int tal2, int tal3){
 }
 ```
 **(frivillig) Hvad betyder rekursion - prøv at slå det op**
+
 Rekursion er når en funktion kalder sig selv
+
 **(frivillig) Give et eksempel på en funktion, der anvender rekursion. Funktionen skal modtage et tal som parameter og returnere fakultet af tallet. F.eks. beregnes fakultet af 5 således 5! = 5x4x3x2x1**
 ```java
 int fakultet(int tal){
