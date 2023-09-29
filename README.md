@@ -503,3 +503,64 @@ void setup() {
 
 
 ```
+# Opgaver i funktioner
+**Hvad bruges krølle-parenteser til i en funktion (og hvad bruges krølle-parenteser til generelt…)**
+Til at definerer scope
+**Hvad anvendes almindelige parenteser til i en funktion**
+Til at definere parametre man kan sende med til funktionen og fungere, som variabler man kan bruge i funktionen
+**Hvad betyder “returtype” og hvor skrives den i en funktion**
+Returtypen er den type værdi funktionen returnere, og den skrives før funktionsnavnet
+**Hvad er forskellen på argumenter og parametre**
+parametre er dem man definerer i funktions-deklarationen og argumenter er det man sender til funktionen, når man kalder den
+**Hvornår er det smart at bruge funktioner**
+Når man skal bruge samme kode flere gange
+**Hvad betyder “return” og hvordan anvendes det**
+At funktionen returnere en værdi, og det anvendes til at returnere en værdi
+**Hvad betyder “void” og hvordan anvendes det**
+At funktionen ikke returnere en værdi, og det anvendes til at definere at funktionen ikke returnere en værdi
+**Lav en funktion med navnet “udskriv10”, der kan udskrive 10-tabellen.**
+```java
+void udskriv10(){
+    for (int i = 1; i <= 10; i++) {
+        println(i*10);
+    }
+}
+```
+**Lav en funktion med navnet “gangMed10”, der modtager et tal som parameter og returnere tallet multipliceret med 10**
+```java
+int gangMed10(int tal){
+    return tal*10;
+}
+```
+**Lav en funktion med navnet “udskrivTabel”, der modtager et tal og udskriver de første 10 tal af den tabel, der svarer til inputtet**
+```java
+void udskrivTabel(int tal){
+    for (int i = 1; i <= 10; i++) {
+        println(i*tal);
+    }
+}
+```
+**Lav en funktion “mult”, der modtager to tal som parametre, og returnere resultatet som er de to tal ganget sammen**
+```java
+int mult(int tal1, int tal2){
+    return tal1*tal2;
+}
+```
+**Lav en ny funktion med samme navn “mult”, der modtager tre tal som parametre. Den nye funktion skal anvende funktionen fra spørgsmål 2 til at gange 3 tal sammen**
+```java
+int mult(int tal1, int tal2, int tal3){
+    return mult(mult(tal1, tal2),tal3);
+}
+```
+**(frivillig) Hvad betyder rekursion - prøv at slå det op**
+Rekursion er når en funktion kalder sig selv
+**(frivillig) Give et eksempel på en funktion, der anvender rekursion. Funktionen skal modtage et tal som parameter og returnere fakultet af tallet. F.eks. beregnes fakultet af 5 således 5! = 5x4x3x2x1**
+```java
+int fakultet(int tal){
+    if (tal == 1) {
+        return 1;
+    } else {
+        return tal*fakultet(tal-1);
+    }
+}
+```
