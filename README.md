@@ -621,3 +621,107 @@ void setup(){
 
 ## Resultat
 ![](Pasted%20image%2020230929142549.png)
+
+
+# Largest number
+```java
+void setup(){
+    println("removeIndex: "+removeIndex("1234567", 3));
+    println("largest: "+largest("1234567"));
+}
+
+String removeIndex(String s, int i) {
+    return s.substring(0, i) + s.substring(i+1, s.length());
+}
+
+String largest(String s){
+    String largest = "";
+    for(int i = 0; i < s.length(); i++){
+        String temp = removeIndex(s, i);
+        if(int(temp) > int(largest)){
+            largest = temp;
+        }
+    }
+    return largest;
+}
+```
+
+# Count in string
+```java
+void setup(){
+    println("countCharInString: "+countCharInString("heje", 'e'));
+}
+
+int countCharInString(String str, char c){
+    int count = 0;
+    for(int i = 0; i < str.length(); i++){
+        if(str.charAt(i) == c){
+            count++;
+        }
+    }
+    return count;
+}
+```
+
+# Beauty factor
+
+```java
+void setup(){
+    println("beautifyOnce: "+beautifyOnce("234"));
+    println("beautify: "+beautify("11"));
+    exit();
+}
+
+int beautifyOnce(String n){
+    int sum = 0;
+    for(int i = 0; i < n.length(); i++){
+        sum += n.charAt(i) - '0';
+    }
+    return sum;
+}
+
+int beautify(String n){
+    while(n.length() > 1){
+        n = beautifyOnce(n)+"";
+    }
+    return int(n);
+}
+```
+# min max
+```java	
+void setup(){
+    int[] list1 = {1,2,3,5,4};
+    println("contains: "+contains(list1, 1));
+    println("min_max: "+min_max(list1));
+    exit();
+}
+
+boolean contains (int[] arr, int val){
+    for (int i = 0; i < arr.length; i++){
+        if (arr[i] == val){
+            return true;
+        }
+    }
+    return false;
+}
+
+boolean min_max(int[] arr){
+    int min = arr[0];
+    int max = arr[0];
+    boolean contains = true;
+    for (int i = 0; i < arr.length; i++){
+        if (arr[i] < min){
+            min = arr[i];
+        }
+        if (arr[i] > max){
+            max = arr[i];
+        }
+    }
+    for(int i = min; i < max; i++){
+        if (!contains(arr, i)){
+            return false;
+        }
+    }
+    return contains;
+}
+```
