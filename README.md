@@ -729,15 +729,25 @@ boolean min_max(int[] arr){
 # objektorienteret programmering
 
 **Forklar hvad der menes med “class”**
+
 En class er en blueprint eller template for et objekt
+
 **Forklar hvad der menes med “object”**
+
 Et objekt er en instans af en class
+
 **Forklar hvordan og hvorfor man anvender “new”**
+
 Laver et "new" (nyt) objekt ud fra en class
+
 **Forklar hvad er “dot-syntax”**
+
 Hvis man skal refere til noget på objektet (f.eks funktions and variables)
+
 **Hvad er en “constructor”**
-En constructor er en særlig funktion i en class, som bliver kaldt når man laver et nyt objekt. Man kan også sige at den bliver brugt til at initialisere objektet.
+
+En constructor er en særlig funktion i en class, som bliver kaldt når man laver et nyt objekt. Man kan også sige at den bliver 
+brugt til at initialisere objektet.
 
 
 
