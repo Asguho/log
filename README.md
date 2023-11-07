@@ -749,6 +749,57 @@ Hvis man skal refere til noget på objektet (f.eks funktions and variables)
 En constructor er en særlig funktion i en class, som bliver kaldt når man laver et nyt objekt. Man kan også sige at den bliver 
 brugt til at initialisere objektet.
 
+## Kode
+```java
+Bubble[] bubbles = new Bubble[10];
 
+void setup() {
+  size(480, 270);
+    for(int i = 0; i < 10; i++) {
+      bubbles[i] = new Bubble(random(5,50));
+    }
+}
+
+void draw() {
+  background(255);
+  for(Bubble b : bubbles) {
+    b.ascend();
+    b.display();
+  }
+}
+
+
+class Bubble {
+
+  float x;
+  float y;
+  float diameter;
+
+  Bubble(float _diameter) {
+    x = width/2;
+    y = height;
+    diameter = _diameter;
+  }
+
+  void ascend() {
+    y--;
+    x = x + random(-2,2);
+    top();
+  }
+
+  void display() {
+    stroke(0);
+    fill(127);
+    ellipse(x, y, diameter, diameter);
+  }
+
+  void top() {
+    if (y < diameter/2) {
+      y = diameter/2;
+    }
+  }
+}
+
+```
 
 
