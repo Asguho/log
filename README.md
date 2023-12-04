@@ -1,4 +1,3 @@
-
 # Pass by value vs. pass by reference
 
 ### 18-08-2023
@@ -31,12 +30,11 @@ String constantString2 = "Hello world";
 assertThat(constantString1).isSameAs(constantString2);
 ```
 
-
-*I det tidligere eksempel opretter vi to strenge og tester, om de har en reference til det samme sted i memory*
+_I det tidligere eksempel opretter vi to strenge og tester, om de har en reference til det samme sted i memory_
 
 Dette designvalg har både fordele og ulemper. Det letter skrivningen af flertrådet kode og giver mulighed for nogle optimeringer. Dog kan det blive dyrt at ændre værdien af en streng. Hvis der er behov for mange ændringer, bør man overveje at bruge `StringBuilder` eller `StringBuffer`. Disse klasser tillader mere effektive ændringer i strengen.
 
-**@Anders Jeg har lidt svært ved at se, hvorfor dette design valg er blevet taget. Personligt ville jeg tænke at de fleste der ikke har læst op på det, og derfor ville de  ikke bruge en `StringBuilder`, og stadig ændre på strengen, hvilket hvis jeg har forstået det rigtigt ville gøre programmet signifikant langsommere. 
+**@Anders Jeg har lidt svært ved at se, hvorfor dette design valg er blevet taget. Personligt ville jeg tænke at de fleste der ikke har læst op på det, og derfor ville de ikke bruge en `StringBuilder`, og stadig ændre på strengen, hvilket hvis jeg har forstået det rigtigt ville gøre programmet signifikant langsommere.
 Hvis man ville have at strengen var immutable, så kunne man jo bare ændre den til en konstant. Er der noget jeg overser?**
 
 (Du mere end velkommen til at lave en pull request og erstatte denne parantese med svaret, det kunne være lidt sejt, ellers kan vi også bare tage den mundligt næste gang. Tak på forhånd)
@@ -44,9 +42,13 @@ Hvis man ville have at strengen var immutable, så kunne man jo bare ændre den 
 https://www.baeldung.com/java-string-pool
 
 # Modulus
+
 Modulus operationen, ofte kaldet "modulo", handler om at finde resten, når et tal deles med et andet tal. Det bruges ofte med symbolet "%". For eksempel er 10 % 3 lig med 1, fordi når 10 deles med 3, er resten 1.
+
 ## Eksempel
+
 ### Kode
+
 ```java
 void setup(){
   clear();
@@ -66,15 +68,23 @@ void draw(){
   rect(frameCount % width,(height/6)*5, 2,2);
 }
 ```
+
 ### Resultat
+
 ![](Pasted%20image%2020230819130047.png)
+
 # kompas
+
 ### If statement
+
 En if-erklæring er en betinget udførelsesstruktur i programmering, der bruges til at vælge mellem to forskellige handlinger baseret på en betingelse. Hvis betingelsen er sand, udføres koden inde i if-blokken.
 
 ### Switch case
+
 Switch-case er en anden type betinget udførelsesstruktur, der bruges i programmering. Det bruges til at vælge en handling blandt flere muligheder baseret på værdien af en variabel eller en udtryk.
+
 ### kode
+
 ```java
 void setup() {
     fullScreen();
@@ -101,7 +111,7 @@ void draw() {
         break;
     }
 }
-  
+
 void printInCenter(char s) {
     textSize(128);
     fill(0);
@@ -109,11 +119,15 @@ void printInCenter(char s) {
     text(s, width / 2, height / 2);
 }
 ```
+
 ### Resultat
+
 ![](Pasted%20image%2020230823124320.png)
 
 # Loops - for og while
+
 ## Miniopgaver
+
 ```java
 void setup() {
     size(500, 500);
@@ -242,9 +256,13 @@ void opg10(){
     }
 }
 ```
+
 ### Resultat
+
 ![](Pasted%20image%2020230905221017.png)
+
 ## for-firkant
+
 ```java
 void ekstraOpgave(){
     //lav 10x10 små firkanter i midten af skærmen hvor firkanterne bliver gradvist mere røde nedad og gradvist mere grønne mod højre
@@ -259,11 +277,17 @@ void ekstraOpgave(){
     }
 }
 ```
+
 ### Resultat
+
 ![](Pasted%20image%2020230905220949.png)
+
 # Nested for-loops
+
 ## Tegn cirkler
+
 ### Kode
+
 ```java
 void setup(){
     size(500, 500);
@@ -274,12 +298,16 @@ void setup(){
     }
 }
 ```
+
 ### Resultat
+
 ![](Pasted%20image%2020230906112025.png)
 
 ## Skakbræt ekstra svær
+
 ### Kode
-``` java
+
+```java
 void setup(){
     size(500, 500);
     for (int i = 0; i < 10*10; i++) {
@@ -290,10 +318,14 @@ void setup(){
 ```
 
 ### Resultat
+
 ![](Pasted%20image%2020230906125422.png)
+
 ## Tegn en trappe
+
 ### kode
-``` java
+
+```java
 void setup() {
     size(500, 500);
     for (int i = 0; i < 50; ++i) {
@@ -304,14 +336,18 @@ void setup() {
     }
 }
 ```
+
 ### Resultat
+
 ![](Pasted%20image%2020230906130720.png)
 
 # Arrays
+
 ## Miniopgaver
+
 ```java
 void setup() {
-    {    
+    {
         //Opret et array af heltal med 5 elementer og tildel det værdierne 1, 2, 3, 4 og 5. Udskriv arrayet.
         int[] listeHeltal = {1,2,3,4,5};
         for (int tal : listeHeltal) {
@@ -325,7 +361,7 @@ void setup() {
             println(farve);
         }
     }
-    {    
+    {
         //Lav et array af strenge, der indeholder navnene på dine yndlingsfarver. Udskriv alle farverne i arrayet.
         float[] temperaturer = {10.2, 15.3, 20.5, 25.9, 30.6};
         float sum = 0;
@@ -399,7 +435,7 @@ void setup(){
         }
 
         for (int i = 0; i < matrix.length; i++) {
-            int sum = 0;    
+            int sum = 0;
             for (int j = 0; j < matrix[i].length; j++) {
                 sum += matrix[i][j];
             }
@@ -503,7 +539,9 @@ void setup() {
 
 
 ```
+
 # Opgaver i funktioner
+
 **Hvad bruges krølle-parenteser til i en funktion (og hvad bruges krølle-parenteser til generelt…)**
 
 Til at definerer scope
@@ -533,6 +571,7 @@ At funktionen returnere en værdi, og det anvendes til at returnere en værdi
 At funktionen ikke returnere en værdi, og det anvendes til at definere at funktionen ikke returnere en værdi
 
 **Lav en funktion med navnet “udskriv10”, der kan udskrive 10-tabellen.**
+
 ```java
 void udskriv10(){
     for (int i = 1; i <= 10; i++) {
@@ -540,13 +579,17 @@ void udskriv10(){
     }
 }
 ```
+
 **Lav en funktion med navnet “gangMed10”, der modtager et tal som parameter og returnere tallet multipliceret med 10**
+
 ```java
 int gangMed10(int tal){
     return tal*10;
 }
 ```
+
 **Lav en funktion med navnet “udskrivTabel”, der modtager et tal og udskriver de første 10 tal af den tabel, der svarer til inputtet**
+
 ```java
 void udskrivTabel(int tal){
     for (int i = 1; i <= 10; i++) {
@@ -554,23 +597,29 @@ void udskrivTabel(int tal){
     }
 }
 ```
+
 **Lav en funktion “mult”, der modtager to tal som parametre, og returnere resultatet som er de to tal ganget sammen**
+
 ```java
 int mult(int tal1, int tal2){
     return tal1*tal2;
 }
 ```
+
 **Lav en ny funktion med samme navn “mult”, der modtager tre tal som parametre. Den nye funktion skal anvende funktionen fra spørgsmål 2 til at gange 3 tal sammen**
+
 ```java
 int mult(int tal1, int tal2, int tal3){
     return mult(mult(tal1, tal2),tal3);
 }
 ```
+
 **(frivillig) Hvad betyder rekursion - prøv at slå det op**
 
 Rekursion er når en funktion kalder sig selv
 
 **(frivillig) Give et eksempel på en funktion, der anvender rekursion. Funktionen skal modtage et tal som parameter og returnere fakultet af tallet. F.eks. beregnes fakultet af 5 således 5! = 5x4x3x2x1**
+
 ```java
 int fakultet(int tal){
     if (tal == 1) {
@@ -582,14 +631,18 @@ int fakultet(int tal){
 ```
 
 # Meget svære opgaver i funktioner
+
 ## Opgave beskrivelse
+
 Lav en rekursiv funktion “int fib(int t)” der kan retunere et bestemt tal i fibonacci-talrækken. F.eks. fib(6) = 5 og fib(8) = 13.
 https://da.wikipedia.org/wiki/Fibonacci-tal
 https://en.wikipedia.org/wiki/Recursion
 
 Lav en anden funktion, som vha. “fib” tegner følgende mønster:
 https://da.wikipedia.org/wiki/Fibonacci-tal#/media/Fil:FibonacciBlocks.svg
-## kode 
+
+## kode
+
 ```java
 int fib(int t) {
     if (t == 1 || t <= 0) {
@@ -598,7 +651,7 @@ int fib(int t) {
     if (t == 2) {
         return 1;
     }
-    
+
     return fib(t - 1) + fib(t - 2);
 }
 
@@ -620,10 +673,11 @@ void setup(){
 ```
 
 ## Resultat
+
 ![](Pasted%20image%2020230929142549.png)
 
-
 # Largest number
+
 ```java
 void setup(){
     println("removeIndex: "+removeIndex("1234567", 3));
@@ -647,6 +701,7 @@ String largest(String s){
 ```
 
 # Count in string
+
 ```java
 void setup(){
     println("countCharInString: "+countCharInString("heje", 'e'));
@@ -687,8 +742,10 @@ int beautify(String n){
     return int(n);
 }
 ```
+
 # min max
-```java	
+
+```java
 void setup(){
     int[] list1 = {1,2,3,5,4};
     println("contains: "+contains(list1, 1));
@@ -746,10 +803,11 @@ Hvis man skal refere til noget på objektet (f.eks funktions and variables)
 
 **Hvad er en “constructor”**
 
-En constructor er en særlig funktion i en class, som bliver kaldt når man laver et nyt objekt. Man kan også sige at den bliver 
+En constructor er en særlig funktion i en class, som bliver kaldt når man laver et nyt objekt. Man kan også sige at den bliver
 brugt til at initialisere objektet.
 
 ## Kode
+
 ```java
 Bubble[] bubbles = new Bubble[10];
 
@@ -802,24 +860,24 @@ class Bubble {
 
 ```
 
-
 # Opgaver i funktions terminologi
 
 **Opgave 1: Forklar begrebet funktion i programmering, herunder betydningen af et funktionskald. Giv et eksempel.**
 
-  En function er en kodeblok som kan bruges flere gange. Når man køre koden i en function, så kaldes det et funktionskald. Se opgave 5 for eksempel.
- 
+En function er en kodeblok som kan bruges flere gange. Når man køre koden i en function, så kaldes det et funktionskald. Se opgave 5 for eksempel.
+
 **Opgave 2: Definér parametre, argumenter og metode-krop i programmering. Giv et eksempel**
- 
- Parametre er variabler man kan parse til funktionen. Argumenter er værdierne som bliver sendt til funktionen. Metode-krop er koden som bliver kørt i funktionen. Se opgave 5 for eksempel.
+
+Parametre er variabler man kan parse til funktionen. Argumenter er værdierne som bliver sendt til funktionen. Metode-krop er koden som bliver kørt i funktionen. Se opgave 5 for eksempel.
 
 **Opgave 3: Forklar begrebet variabel-scope i programmering. Og forskellen på lokale variable og globale variable. Giv et eksempel**
 
-   Variabel-scope er hvor en variabel kan bruges. Lokale variable kan kun bruges i den function de er defineret i. Globale variable kan bruges i hele programmet.
+Variabel-scope er hvor en variabel kan bruges. Lokale variable kan kun bruges i den function de er defineret i. Globale variable kan bruges i hele programmet.
 
 **Opgave 4: Definér returtype og returværdi i programmering.**
 
-  Returtype er typen af værdi som bliver returneret. Returværdi er værdien som bliver returneret.
+Returtype er typen af værdi som bliver returneret. Returværdi er værdien som bliver returneret.
+
 # Opgaver i programmering af funktioner
 
 ```java
@@ -862,4 +920,75 @@ void tegnPolygon(PVector[] punkter, float x, float y) {
     }
 
 }
+```
+
+# Nedarvning
+
+**forklar fordelene ved at nedarve fra en anden klasse?**
+Man behøver ikke at skrive den samme kode flere gange
+**forklar hvad der menes med begreberne sub-klasse (også kaldet under-klasse) og super-klasse?**
+En sub-klasse er en klasse som nedarver fra en anden klasse. En super-klasse er den klasse som bliver nedarvet fra.
+**forklar hvordan man anvender extends, og hvordan det virker?**
+Vis man extender en klasse, så nedarver den alle funktioner og variabler fra den klasse.
+**forklar hvordan man anvender super, og hvordan det virker?**
+Super bliver brugt til at kalde konstruktoren fra super-klassen.
+**lav exercise 22-2, fra kapitel 22.2, og skriv koden ind i din logbog!**
+
+```java
+class Shape {
+    float x;
+    float y;
+    float r;
+
+    Shape(float x_, float y_, float r_) {
+        x = x_;
+        y = y_;
+        r = r_;
+    }
+
+    void jiggle() {
+        x += random(-1,1);
+        y += random(-1,1);
+    }
+
+    void display() {
+        point(x,y);
+    }
+}
+
+class Line extends Shape {
+    float x2, y2;
+
+    Line(float x_, float y_, float r_, float x2_, float y2_) {
+        super(x_, y_, r_);
+        x2 = x2_;
+        y2 = y2_;
+    }
+
+    void jiggle() {
+        super.jiggle();
+        x2 += random(-1,1);
+        y2 += random(-1,1);
+    }
+
+    void display() {
+        strokeWeight(r);
+        stroke(255);
+        line(x, y, x2, y2);
+    }
+}
+
+Line l = new Line(10, 10, 10, 100, 100);
+void setup() {
+    size(200,200);
+}
+
+void draw() {
+    background(0);
+    l.jiggle();
+    l.display();
+}
+
+
+
 ```
