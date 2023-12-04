@@ -925,13 +925,21 @@ void tegnPolygon(PVector[] punkter, float x, float y) {
 # Nedarvning
 
 **forklar fordelene ved at nedarve fra en anden klasse?**
+
 Man behøver ikke at skrive den samme kode flere gange
+
 **forklar hvad der menes med begreberne sub-klasse (også kaldet under-klasse) og super-klasse?**
+
 En sub-klasse er en klasse som nedarver fra en anden klasse. En super-klasse er den klasse som bliver nedarvet fra.
+
 **forklar hvordan man anvender extends, og hvordan det virker?**
+
 Vis man extender en klasse, så nedarver den alle funktioner og variabler fra den klasse.
+
 **forklar hvordan man anvender super, og hvordan det virker?**
+
 Super bliver brugt til at kalde konstruktoren fra super-klassen.
+
 **lav exercise 22-2, fra kapitel 22.2, og skriv koden ind i din logbog!**
 
 ```java
