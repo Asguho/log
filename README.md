@@ -940,6 +940,10 @@ Vis man extender en klasse, så nedarver den alle funktioner og variabler fra de
 
 Super bliver brugt til at kalde konstruktoren fra super-klassen.
 
+**Frivillig svær opgave: Forklar hvad der i værste tilfælde kan ske hvis man nedarver fra flere klasser på samme tid! Og hvorfor java (processing) ikke tillader dette**
+
+Fordi der kan være konflikter mellem funktioner og variabler med samme navn.
+
 **lav exercise 22-2, fra kapitel 22.2, og skriv koden ind i din logbog!**
 
 ```java
@@ -996,7 +1000,4 @@ void draw() {
     l.jiggle();
     l.display();
 }
-
-
-
 ```
