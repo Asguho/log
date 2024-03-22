@@ -1001,3 +1001,11 @@ void draw() {
     l.display();
 }
 ```
+# Encapsulation
+”Encapsulation” eller blot indkapsling er et koncept indenfor programmering der primært beskæftiger at regulere adgang til variabler, funktioner og klasser. Dette gøres for at kunne begrænse adgangen til variabler, funktioner og klasser. Desuden spiller indkapsling også en vigtig rolle i at beskytte og skjule data. 
+
+# Single-responsibility
+Single-responsibility princippet handler om at en enkelt klasse kun skal håndtere en ting, med andre ord skal hver klasse have et ansvar.
+
+# Player class
+Denne klasse er blevet skrevet i java, da vi så kan lave properties til private eller public så vi føgler encapsulation. Når vi laver collision tjekket så pass'er vi platforme objectet ind, som så har nogle getters, så vi kan få positionen og størrelsen og derved kan data'en ikke blive modifieret.
